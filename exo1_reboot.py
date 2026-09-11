@@ -26,44 +26,80 @@ users = [
 # ----- Partie A : les bases -----
 
 # Q1 — Afficher le nom de chaque utilisateur.
-
+print("---------------Q1---------------")
+for user in users:
+    print(user['name'])
 
 # Q2 — Afficher uniquement les utilisateurs actifs.
-
+print("---------------Q2---------------")
+for user in users:
+    if user["active"]:
+        print(user)
 
 # Q3 — Compter les utilisateurs actifs et afficher "<n> utilisateurs actifs".
+print("---------------Q3---------------")
 
-
+count = 0
+for user in users:
+    if user["active"]:
+        count += 1
+print(f'Il y a {count} utilisateurs actifs.')
 # Q4 — Afficher uniquement les utilisateurs majeurs (18 ans ou plus).
-
+print("---------------Q4---------------")
+for user in users:
+    if user ["age"]>=18:
+        print(user["name"],user["age"])
 
 # Q5 — Afficher les utilisateurs qui sont à la fois actifs ET majeurs.
-
-
+print("---------------Q5---------------")
+for user in users:
+    if user["age"] >= 18 and user["active"]:
+        print(user) 
 # ----- Partie B : les fonctions -----
 
 # Q6
 def is_adult(user):
-    pass
-
+    return user["age"] >= 18
 
 # Q7
-def get_active_users(users):
-    pass
-
+def get_active_users( users):
+    # return [u for u in users if u["active"]]
+    actives = []
+    for u in users :
+        if u [  "active"  ] : actives.append(  u)
+    return actives
 
 # Q8
 def get_active_adults(users):
-    pass
+    # return [u for u in users if u["active"] and is_adult(u)]
+    actives = []
+    for u in users:
+        if u ["active"] and is_adult(u):
+            actives.append(u) 
+    return actives
+
 
 
 # Q9
 def find_user_by_id(users, user_id):
-    pass
+    for user in users:
+        if user["id"] == user_id:
+            return user
+    return None
 
 
 # ----- Partie C : le challenge -----
 
 # Q10
 def get_statistics(users):
-    pass
+    stats = {
+        "total": len(users),
+        "actives": len([user for user in users if user["active"]]),
+        "inactives": len([user for user in users if not user["active"]]),
+        "adults": len([user for user in users if user["age"] >= 18]),
+        "minors": len([user for user in users if user["age"] < 18])
+    }
+    return stats
+
+
+print('--------------Fonctions--------------')
