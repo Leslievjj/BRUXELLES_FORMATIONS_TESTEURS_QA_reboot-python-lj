@@ -1,0 +1,94 @@
+username="sofian"
+age=25
+price=99.99
+boolean=True
+is_adulte=age>=18
+
+lst=[1,2,3]
+tup = (1,2,3)
+ensemble={1,2,3,4,5}
+dico = {
+    "formation_name": "QA testeur",
+    "nb stagiare": 12,
+    "technos_used": ["python", "jira", "js"],
+    "addresse": {
+        "rue": "jules cock",
+        "postcode": 1160
+    }
+}
+
+ensemble = {1, 2, 3, 4, 5}
+
+
+# ensemble o le set, pas d'ordre cle valeur....le tuple on peut pas le modifier...liste est modifiable on peut l'ordonner dans le dictionnaire 
+#pas d'index...le dernier prima si en un dictionaire hay doublons, entonces toma el ultimo valor
+
+lst_avec_doublon=[1,1,1,2,2]
+lst_sans_doublons=list(set(lst_avec_doublon))
+premier_element=lst[0]
+formation_name_pas_safe=dico["formation_name"]
+formation_name_safe=dico.get("formation_name")
+print(formation_name_safe)
+
+longueur=len(lst)
+
+lst_technos=["python","java","php"]
+for techno in lst_technos:
+
+    #match techno
+    #case
+    #case:
+    #case_:
+
+
+    # if techno=="java":
+    #     print('aaah')
+    # elif techno=="php":
+    #     print('aooh'):
+    # else:
+    #     print("c'est bien")
+    # estudiar pass, cotinue
+
+    for i in range(10):
+        print(i)
+    # imprime del 0 al 9
+    for i in range(len(lst_technos)):
+            print(lst_technos(i))
+
+    start=0
+    stop=15
+    step=1
+    for i in range(start,stop,step):
+            print(i)
+
+    #afficher variables dns un string avec f
+
+    for index, element in enumerate(lst_technos):
+          print(f'elem={element}---index={index}')
+          if element=="python":
+             continue
+          print('sans le cotinue he')
+          
+
+    iteration=0
+    while iteration<10:
+           if iteration==5:
+            break
+           print(f'Iteration {iteration}')
+        iteration+=1
+
+#condiciones para entrar en la bucle y sortir de la bucle
+#chequear ternaires que puedo hacer en una linea
+#chequear en js ternaire
+# se puede hacer un stepa tambien en el ejl de gran tab pair
+#git commit -  and git push  ...fetch y pull
+
+##le typage de variables permet l'autocompletion dans les functions en py
+#bloc try lo q py trata de ejecutar y si no hay problem lo ejecutar#
+#except  on shop un erreur cn un texto pero si en el except no hemos shopeado el error me sale el mensaje de eroor comun en terminal
+#finally ejecute d'office a la fin du programme quoi qui arrive
+#git stash  /// git stash pop
+
+
+
+
